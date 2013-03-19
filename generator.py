@@ -56,6 +56,12 @@ def extended_euclid(a, N):
 
 
 def generateKey(l): 
+    print "What is the length of key you want ?"
+    print "\t(1) 1024 bits"
+    print "\t(2) 2048 bits"
+    print "\t(3) 4096 bits"
+    choice = int(raw_input())
+    length = list([1024, 2048, 4098])[choice - 1]
     sys.stdout.write("generating the first prime\r")
     sys.stdout.flush()
     p = big_prime(l/2)
